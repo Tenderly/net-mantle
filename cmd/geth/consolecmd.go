@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/console"
-	"github.com/ethereum/go-ethereum/internal/flags"
+	"github.com/tenderly/net-mantle/cmd/utils"
+	"github.com/tenderly/net-mantle/console"
+	"github.com/tenderly/net-mantle/internal/flags"
 	"github.com/urfave/cli/v2"
 )
 

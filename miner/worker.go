@@ -26,17 +26,17 @@ import (
 	"time"
 
 	mapset "github.com/deckarep/golang-set/v2"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/tracers"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/consensus"
+	"github.com/tenderly/net-mantle/consensus/misc"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/state"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/eth/tracers"
+	"github.com/tenderly/net-mantle/event"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/params"
+	"github.com/tenderly/net-mantle/trie"
 )
 
 const (
@@ -1268,7 +1268,7 @@ func (w *worker) commit(env *environment, interval func(), update bool, start ti
 			interval()
 		}
 		// Create a local environment copy, avoid the data race with snapshot state.
-		// https://github.com/ethereum/go-ethereum/issues/24299
+		// https://github.com/tenderly/net-mantle/issues/24299
 		env := env.copy()
 		// Withdrawals are set to nil here, because this is only called in PoW.
 		block, err := w.engine.FinalizeAndAssemble(w.chain, env.header, env.state, env.txs, env.unclelist(), env.receipts, nil)

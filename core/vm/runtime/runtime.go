@@ -19,13 +19,13 @@ package runtime
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/rawdb"
+	"github.com/tenderly/net-mantle/core/state"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/params"
 )
 
 // Config is a basic type specifying certain configuration flags for running

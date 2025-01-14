@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-mantle/common/mclock"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/ethdb/memorydb"
+	"github.com/tenderly/net-mantle/p2p/enode"
+	"github.com/tenderly/net-mantle/p2p/enr"
 )
 
 const (

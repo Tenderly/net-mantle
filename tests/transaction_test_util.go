@@ -19,12 +19,12 @@ package tests
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/hexutil"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/params"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 // TransactionTest checks RLP decoding and sender derivation of transactions.

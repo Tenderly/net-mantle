@@ -25,17 +25,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	cmath "github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/common/prque"
-	"github.com/ethereum/go-ethereum/consensus/misc"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/common"
+	cmath "github.com/tenderly/net-mantle/common/math"
+	"github.com/tenderly/net-mantle/common/prque"
+	"github.com/tenderly/net-mantle/consensus/misc"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/state"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/event"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/metrics"
+	"github.com/tenderly/net-mantle/params"
 )
 
 const (

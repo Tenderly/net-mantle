@@ -17,8 +17,8 @@
 package core
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/types"
 )
 
 // NewTxsEvent is posted when a batch of transactions enter the transaction pool.

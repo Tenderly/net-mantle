@@ -35,11 +35,11 @@ import (
 	"time"
 
 	"github.com/docker/docker/pkg/reexec"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/node"
+	"github.com/tenderly/net-mantle/p2p"
+	"github.com/tenderly/net-mantle/p2p/enode"
+	"github.com/tenderly/net-mantle/rpc"
 	"github.com/gorilla/websocket"
 )
 

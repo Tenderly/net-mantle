@@ -17,7 +17,7 @@
 package server
 
 import (
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-mantle/metrics"
 )
 
 var (

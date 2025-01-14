@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common/fdlimit"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/common/fdlimit"
+	"github.com/tenderly/net-mantle/internal/flags"
+	"github.com/tenderly/net-mantle/log"
 	"github.com/urfave/cli/v2"
 )
 

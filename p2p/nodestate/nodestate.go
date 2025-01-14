@@ -23,13 +23,13 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common/mclock"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/metrics"
+	"github.com/tenderly/net-mantle/p2p/enode"
+	"github.com/tenderly/net-mantle/p2p/enr"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 var (

@@ -22,11 +22,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/les/utils"
-	"github.com/ethereum/go-ethereum/les/vflux"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/les/utils"
+	"github.com/tenderly/net-mantle/les/vflux"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/p2p/enode"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 type (

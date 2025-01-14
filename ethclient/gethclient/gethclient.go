@@ -24,12 +24,12 @@ import (
 	"runtime"
 	"runtime/debug"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-mantle"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/hexutil"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/p2p"
+	"github.com/tenderly/net-mantle/rpc"
 )
 
 // Client is a wrapper around rpc.Client that implements geth-specific functionality.

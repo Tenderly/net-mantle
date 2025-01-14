@@ -44,13 +44,13 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/simulations"
-	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/internal/flags"
+	"github.com/tenderly/net-mantle/p2p"
+	"github.com/tenderly/net-mantle/p2p/enode"
+	"github.com/tenderly/net-mantle/p2p/simulations"
+	"github.com/tenderly/net-mantle/p2p/simulations/adapters"
+	"github.com/tenderly/net-mantle/rpc"
 	"github.com/urfave/cli/v2"
 )
 

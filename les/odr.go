@@ -22,11 +22,11 @@ import (
 	"sort"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/txpool"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/light"
+	"github.com/tenderly/net-mantle/common/mclock"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/txpool"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/light"
 )
 
 // LesOdr implements light.OdrBackend

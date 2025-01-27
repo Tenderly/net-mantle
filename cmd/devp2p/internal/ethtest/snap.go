@@ -22,13 +22,13 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth/protocols/snap"
-	"github.com/ethereum/go-ethereum/internal/utesting"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/eth/protocols/snap"
+	"github.com/tenderly/net-mantle/internal/utesting"
+	"github.com/tenderly/net-mantle/light"
+	"github.com/tenderly/net-mantle/trie"
 	"golang.org/x/crypto/sha3"
 )
 

@@ -24,8 +24,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/p2p/enode"
 )
 
 const jsonIndent = "    "

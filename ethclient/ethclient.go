@@ -577,23 +577,31 @@ func (ec *Client) SendTransaction(ctx context.Context, tx *types.Transaction) er
 	return ec.c.CallContext(ctx, nil, "eth_sendRawTransaction", hexutil.Encode(data))
 }
 
+// SendTransactionWithPreconf injects a signed transaction into the pending pool for execution.
+//
+// If the transaction was a contract creation use the TransactionReceipt method to get the
+// contract address after the transaction has been mined.
+func (ec *Client) SendTransactionWithPreconf(ctx context.Context, tx *types.Transaction, result interface{}) error {
+	data, err := tx.MarshalBinary()
+	if err != nil {
+		return err
+	}
+	return ec.c.CallContext(ctx, &result, "eth_sendRawTransactionWithPreconf", hexutil.Encode(data))
+}
+
 func toBlockNumArg(number *big.Int) string {
 	if number == nil {
 		return "latest"
 	}
-	pending := big.NewInt(-1)
-	if number.Cmp(pending) == 0 {
-		return "pending"
+	if number.Sign() >= 0 {
+		return hexutil.EncodeBig(number)
 	}
-	finalized := big.NewInt(int64(rpc.FinalizedBlockNumber))
-	if number.Cmp(finalized) == 0 {
-		return "finalized"
+	// It's negative.
+	if number.IsInt64() {
+		return rpc.BlockNumber(number.Int64()).String()
 	}
-	safe := big.NewInt(int64(rpc.SafeBlockNumber))
-	if number.Cmp(safe) == 0 {
-		return "safe"
-	}
-	return hexutil.EncodeBig(number)
+	// It's negative and large, which is invalid.
+	return fmt.Sprintf("<invalid %d>", number)
 }
 
 func toCallArg(msg ethereum.CallMsg) interface{} {

@@ -24,16 +24,16 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/les/downloader"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/mclock"
+	"github.com/tenderly/net-mantle/core/forkid"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/eth/protocols/eth"
+	"github.com/tenderly/net-mantle/les/downloader"
+	"github.com/tenderly/net-mantle/light"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/p2p"
+	"github.com/tenderly/net-mantle/params"
 )
 
 // clientHandler is responsible for receiving and processing all incoming server

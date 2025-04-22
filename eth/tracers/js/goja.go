@@ -24,12 +24,12 @@ import (
 
 	"github.com/dop251/goja"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth/tracers"
-	jsassets "github.com/ethereum/go-ethereum/eth/tracers/js/internal/tracers"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/hexutil"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/eth/tracers"
+	jsassets "github.com/tenderly/net-mantle/eth/tracers/js/internal/tracers"
 )
 
 const (

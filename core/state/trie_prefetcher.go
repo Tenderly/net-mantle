@@ -19,9 +19,9 @@ package state
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/metrics"
 )
 
 var (

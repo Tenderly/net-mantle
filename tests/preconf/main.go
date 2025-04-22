@@ -5,11 +5,11 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/tests/preconf/config"
-	frontrunning "github.com/ethereum/go-ethereum/tests/preconf/front_running"
-	"github.com/ethereum/go-ethereum/tests/preconf/sort"
-	"github.com/ethereum/go-ethereum/tests/preconf/stress"
+	"github.com/tenderly/net-mantle/ethclient"
+	"github.com/tenderly/net-mantle/tests/preconf/config"
+	frontrunning "github.com/tenderly/net-mantle/tests/preconf/front_running"
+	"github.com/tenderly/net-mantle/tests/preconf/sort"
+	"github.com/tenderly/net-mantle/tests/preconf/stress"
 )
 
 func main() {

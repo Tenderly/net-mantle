@@ -24,7 +24,7 @@ import (
 	"crypto/elliptic"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/tenderly/net-mantle/common/math"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 )
 

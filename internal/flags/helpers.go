@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/internal/version"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/internal/version"
+	"github.com/tenderly/net-mantle/params"
 	"github.com/urfave/cli/v2"
 )
 

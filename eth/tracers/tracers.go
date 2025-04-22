@@ -21,8 +21,8 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/vm"
 )
 
 // Context contains some contextual infos for a transaction execution that is not

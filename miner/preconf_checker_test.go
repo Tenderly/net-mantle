@@ -3,7 +3,7 @@ package miner
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/preconf"
+	"github.com/tenderly/net-mantle/preconf"
 )
 
 func TestIsSyncStatusOk(t *testing.T) {

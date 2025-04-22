@@ -19,7 +19,7 @@ package core
 import (
 	"runtime"
 
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-mantle/core/types"
 )
 
 // SenderCacher is a concurrent transaction sender recoverer and cacher.

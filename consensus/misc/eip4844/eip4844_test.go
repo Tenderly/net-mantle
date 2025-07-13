@@ -21,8 +21,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/params"
 )
 
 func TestCalcExcessBlobGas(t *testing.T) {

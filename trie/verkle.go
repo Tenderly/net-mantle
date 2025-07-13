@@ -22,12 +22,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/trie/trienode"
-	"github.com/ethereum/go-ethereum/trie/utils"
-	"github.com/ethereum/go-ethereum/triedb/database"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/trie/trienode"
+	"github.com/tenderly/net-mantle/trie/utils"
+	"github.com/tenderly/net-mantle/triedb/database"
 	"github.com/ethereum/go-verkle"
 	"github.com/holiman/uint256"
 )

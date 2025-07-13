@@ -19,17 +19,17 @@ package state
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/lru"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/trie"
-	"github.com/ethereum/go-ethereum/trie/utils"
-	"github.com/ethereum/go-ethereum/triedb"
-	"github.com/ethereum/go-ethereum/triedb/database"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/lru"
+	"github.com/tenderly/net-mantle/core/rawdb"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/rlp"
+	"github.com/tenderly/net-mantle/trie"
+	"github.com/tenderly/net-mantle/trie/utils"
+	"github.com/tenderly/net-mantle/triedb"
+	"github.com/tenderly/net-mantle/triedb/database"
 )
 
 // ContractCodeReader defines the interface for accessing contract code.

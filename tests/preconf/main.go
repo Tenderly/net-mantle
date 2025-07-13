@@ -5,15 +5,15 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/tests/preconf/config"
-	frontrunning "github.com/ethereum/go-ethereum/tests/preconf/front_running"
-	"github.com/ethereum/go-ethereum/tests/preconf/sort"
-	"github.com/ethereum/go-ethereum/tests/preconf/stress"
+	"github.com/tenderly/net-mantle/accounts/abi/bind"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/ethclient"
+	"github.com/tenderly/net-mantle/tests/preconf/config"
+	frontrunning "github.com/tenderly/net-mantle/tests/preconf/front_running"
+	"github.com/tenderly/net-mantle/tests/preconf/sort"
+	"github.com/tenderly/net-mantle/tests/preconf/stress"
 )
 
 // There are three tests that require manual modification of op-geth configuration to cover:

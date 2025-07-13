@@ -17,15 +17,15 @@
 package rawdb
 
 import (
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/params"
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/internal/blocktest"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/internal/blocktest"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 var newTestHasher = blocktest.NewHasher

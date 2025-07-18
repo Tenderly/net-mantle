@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/ethereum/go-ethereum/accounts/abi"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core"
@@ -201,6 +202,10 @@ func (pool *LegacyPool) handlePreconfTx(from common.Address, tx *types.Transacti
 				} else {
 					event.Status = core.PreconfStatusFailed
 					event.Reason = vm.ErrExecutionReverted.Error()
+					log.Debug("preconf failed", "tx", txHash, "reason", event.Reason, "returnData", response.ReturnData)
+					if reason, err := abi.UnpackRevert(response.ReturnData); err == nil {
+						event.Reason = fmt.Sprintf("%v: %v", vm.ErrExecutionReverted, reason)
+					}
 				}
 				event.PredictedL2BlockNumber = hexutil.Uint64(response.Receipt.BlockNumber.Uint64())
 			}

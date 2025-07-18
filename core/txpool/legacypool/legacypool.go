@@ -823,6 +823,7 @@ func (pool *LegacyPool) add(tx *types.Transaction) (replaced bool, err error) {
 			status := pool.preconfTxs.GetStatus(old.Hash())
 			// only timeout preconf tx can be replaced
 			if status != nil && *status != core.PreconfStatusTimeout {
+				log.Debug("same nonce preconf tx is in process", "tx", old.Hash().Hex(), "nonce", tx.Nonce(), "status", string(*status))
 				return false, txpool.ErrPreconfInProcess
 			}
 		}

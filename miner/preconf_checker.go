@@ -384,7 +384,7 @@ func (c *preconfChecker) applyTx(env *environment, tx *types.Transaction) (*type
 		snap = env.state.Snapshot()
 		gp   = env.gasPool.Gas()
 	)
-	receipt, returnData, err := applyTransaction(env.evm, env.gasPool, env.state, env.header, tx, &env.header.GasUsed)
+	receipt, returnData, err := applyPreconfTransaction(env.evm, env.gasPool, env.state, env.header, tx, &env.header.GasUsed)
 	if err != nil {
 		env.state.RevertToSnapshot(snap)
 		env.gasPool.SetGas(gp)
@@ -397,7 +397,7 @@ func (c *preconfChecker) applyTx(env *environment, tx *types.Transaction) (*type
 }
 
 // core.ApplyTransaction(env.evm, env.gasPool, env.state, env.header, tx, &env.header.GasUsed)
-func applyTransaction(evm *vm.EVM, gp *core.GasPool, statedb *state.StateDB, header *types.Header, tx *types.Transaction, usedGas *uint64) (receipt *types.Receipt, returnData []byte, err error) {
+func applyPreconfTransaction(evm *vm.EVM, gp *core.GasPool, statedb *state.StateDB, header *types.Header, tx *types.Transaction, usedGas *uint64) (receipt *types.Receipt, returnData []byte, err error) {
 	// ApplyTransaction
 	rules := evm.ChainConfig().Rules(header.Number, false, header.Time)
 	msg, err := core.TransactionToMessage(tx, types.MakeSigner(evm.ChainConfig(), header.Number, header.Time), header.BaseFee, &rules)

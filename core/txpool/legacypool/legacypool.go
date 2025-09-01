@@ -806,6 +806,13 @@ func (pool *LegacyPool) add(tx *types.Transaction) (replaced bool, err error) {
 
 		// Kick out the underpriced remote transactions.
 		for _, tx := range drop {
+			// if tx is preconf tx, don't discard it
+			// This is safe because preconf txs are guaranteed to be added to and removed from the transaction pool within at most one future Layer-1 block.
+			// Therefore, prohibiting the removal of preconf txs is manageable.
+			// If removal were permitted, successful or failed preconf txs could be removed due to excessively low prices, defeating the purpose of preconf txs.
+			if pool.preconfTxs.Contains(tx.Hash()) {
+				continue
+			}
 			log.Trace("Discarding freshly underpriced transaction", "hash", tx.Hash(), "gasTipCap", tx.GasTipCap(), "gasFeeCap", tx.GasFeeCap())
 			underpricedTxMeter.Mark(1)
 
@@ -823,6 +830,7 @@ func (pool *LegacyPool) add(tx *types.Transaction) (replaced bool, err error) {
 			status := pool.preconfTxs.GetStatus(old.Hash())
 			// only timeout preconf tx can be replaced
 			if status != nil && *status != core.PreconfStatusTimeout {
+				log.Debug("same nonce preconf tx is in process", "tx", old.Hash().Hex(), "nonce", tx.Nonce(), "status", string(*status))
 				return false, txpool.ErrPreconfInProcess
 			}
 		}

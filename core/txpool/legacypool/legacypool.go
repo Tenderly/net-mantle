@@ -1336,7 +1336,7 @@ func (pool *LegacyPool) runReorg(done chan struct{}, reset *txpoolResetRequest, 
 	if reset != nil {
 		if reset.newHead != nil && reset.oldHead != nil {
 			// Discard the transactions with the gas limit higher than the cap.
-			if pool.chainconfig.IsOsaka(reset.newHead.Number, reset.newHead.Time) && !pool.chainconfig.IsOsaka(reset.oldHead.Number, reset.oldHead.Time) {
+			if !pool.chainconfig.IsOptimism() && pool.chainconfig.IsOsaka(reset.newHead.Number, reset.newHead.Time) && !pool.chainconfig.IsOsaka(reset.oldHead.Number, reset.oldHead.Time) {
 				var hashes []common.Hash
 				pool.all.Range(func(hash common.Hash, tx *types.Transaction) bool {
 					if tx.Gas() > params.MaxTxGas {

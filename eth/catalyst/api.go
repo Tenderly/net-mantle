@@ -598,10 +598,6 @@ func (api *ConsensusAPI) NewPayloadV4(params engine.ExecutableData, versionedHas
 		return invalidStatus, unsupportedForkErr("newPayloadV4 must only be called for prague payloads")
 	}
 
-	if api.eth.BlockChain().Config().IsMantleSkadi(params.Timestamp) && params.WithdrawalsRoot == nil {
-		return engine.PayloadStatusV1{Status: engine.INVALID}, engine.InvalidParams.With(errors.New("nil withdrawalsRoot post skadi"))
-	}
-
 	requests := convertRequests(executionRequests)
 	if err := validateRequests(requests); err != nil {
 		return engine.PayloadStatusV1{Status: engine.INVALID}, engine.InvalidParams.With(err)
@@ -623,6 +619,14 @@ func (api *ConsensusAPI) newPayload(params engine.ExecutableData, versionedHashe
 	//    sequentially.
 	// Hence, we use a lock here, to be sure that the previous call has finished before we
 	// check whether we already have the block locally.
+
+	// OP-Stack diff payload validation:
+	if api.config().IsOptimism() {
+		if err := checkOptimismPayload(params, api.config()); err != nil {
+			return api.invalid(err, nil), nil
+		}
+	}
+
 	api.newPayloadLock.Lock()
 	defer api.newPayloadLock.Unlock()
 

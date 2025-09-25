@@ -546,7 +546,7 @@ func (st *stateTransition) preCheck(metaTxV3 bool) (*big.Int, error) {
 			return nil, ErrMissingBlobHashes
 		}
 		if isOsaka && len(msg.BlobHashes) > params.BlobTxMaxBlobs {
-			return nil,ErrTooManyBlobs
+			return nil, ErrTooManyBlobs
 		}
 		for i, hash := range msg.BlobHashes {
 			if !kzg4844.IsValidVersionedHash(hash[:]) {
@@ -579,8 +579,8 @@ func (st *stateTransition) preCheck(metaTxV3 bool) (*big.Int, error) {
 		}
 	}
 	// Verify tx gas limit does not exceed EIP-7825 cap.
-	if isOsaka && msg.GasLimit > params.MaxTxGas {
-		return nil,fmt.Errorf("%w (cap: %d, tx: %d)", ErrGasLimitTooHigh, params.MaxTxGas, msg.GasLimit)
+	if !st.evm.ChainConfig().IsOptimism() && isOsaka && msg.GasLimit > params.MaxTxGas {
+		return nil, fmt.Errorf("%w (cap: %d, tx: %d)", ErrGasLimitTooHigh, params.MaxTxGas, msg.GasLimit)
 	}
 	return st.buyGas(metaTxV3)
 }

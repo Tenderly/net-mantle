@@ -92,7 +92,7 @@ func (p *statePrefetcher) Prefetch(block *types.Block, statedb *state.StateDB, c
 				}
 			}
 			// Execute the message to preload the implicit touched states
-			evm := vm.NewEVM(NewEVMBlockContext(header, p.chain, nil, p.config, statedb), stateCpy, p.config, cfg)
+			evm := vm.NewEVM(NewEVMBlockContext(header, p.chain, nil, p.config, stateCpy), stateCpy, p.config, cfg)
 			rules := evm.ChainConfig().Rules(block.Number(), false, header.Time)
 
 			// Convert the transaction into an executable message and pre-cache its sender

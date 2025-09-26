@@ -197,8 +197,12 @@ type Message struct {
 	// or the state prefetching.
 	SkipNonceChecks bool
 
-	// When SkipFromEOACheck is true, the message sender is not checked to be an EOA.
-	SkipFromEOACheck bool
+	// When set, the message is not treated as a transaction, and certain
+	// transaction-specific checks are skipped:
+	//
+	// - From is not verified to be an EOA
+	// - GasLimit is not checked against the protocol defined tx gaslimit
+	SkipTransactionChecks bool
 
 	IsSystemTx     bool                 // IsSystemTx indicates the message, if also a deposit, does not emit gas usage.
 	IsDepositTx    bool                 // IsDepositTx indicates the message is force-included and can persist a mint.
@@ -233,7 +237,7 @@ func TransactionToMessage(tx *types.Transaction, s types.Signer, baseFee *big.In
 		AccessList:            tx.AccessList(),
 		SetCodeAuthorizations: tx.SetCodeAuthorizations(),
 		SkipNonceChecks:       false,
-		SkipFromEOACheck:      false,
+		SkipTransactionChecks: false,
 		BlobHashes:            tx.BlobHashes(),
 		BlobGasFeeCap:         tx.BlobGasFeeCap(),
 
@@ -500,7 +504,12 @@ func (st *stateTransition) preCheck(metaTxV3 bool) (*big.Int, error) {
 				msg.From.Hex(), stNonce)
 		}
 	}
-	if !msg.SkipFromEOACheck {
+	isOsaka := st.evm.ChainConfig().IsOsaka(st.evm.Context.BlockNumber, st.evm.Context.Time)
+	if !msg.SkipTransactionChecks {
+		// Verify tx gas limit does not exceed EIP-7825 cap.
+		if !st.evm.ChainConfig().IsOptimism() && isOsaka && msg.GasLimit > params.MaxTxGas {
+			return nil,fmt.Errorf("%w (cap: %d, tx: %d)", ErrGasLimitTooHigh, params.MaxTxGas, msg.GasLimit)
+		}
 		// Make sure the sender is an EOA
 		code := st.state.GetCode(msg.From)
 		_, delegated := types.ParseDelegation(code)
@@ -534,7 +543,6 @@ func (st *stateTransition) preCheck(metaTxV3 bool) (*big.Int, error) {
 		}
 	}
 	// Check the blob version validity
-	isOsaka := st.evm.ChainConfig().IsOsaka(st.evm.Context.BlockNumber, st.evm.Context.Time)
 	if msg.BlobHashes != nil {
 		// The to field of a blob tx type is mandatory, and a `BlobTx` transaction internally
 		// has it as a non-nillable value, so any msg derived from blob transaction has it non-nil.
@@ -577,10 +585,6 @@ func (st *stateTransition) preCheck(metaTxV3 bool) (*big.Int, error) {
 		if len(msg.SetCodeAuthorizations) == 0 {
 			return nil, fmt.Errorf("%w (sender %v)", ErrEmptyAuthList, msg.From)
 		}
-	}
-	// Verify tx gas limit does not exceed EIP-7825 cap.
-	if !st.evm.ChainConfig().IsOptimism() && isOsaka && msg.GasLimit > params.MaxTxGas {
-		return nil, fmt.Errorf("%w (cap: %d, tx: %d)", ErrGasLimitTooHigh, params.MaxTxGas, msg.GasLimit)
 	}
 	return st.buyGas(metaTxV3)
 }
@@ -940,12 +944,12 @@ func (st *stateTransition) applyAuthorization(auth *types.SetCodeAuthorization) 
 	st.state.SetNonce(authority, auth.Nonce+1, tracing.NonceChangeAuthorization)
 	if auth.Address == (common.Address{}) {
 		// Delegation to zero address means clear.
-		st.state.SetCode(authority, nil)
+		st.state.SetCode(authority, nil, tracing.CodeChangeAuthorizationClear)
 		return nil
 	}
 
 	// Otherwise install delegation to auth.Address.
-	st.state.SetCode(authority, types.AddressToDelegation(auth.Address))
+	st.state.SetCode(authority, types.AddressToDelegation(auth.Address), tracing.CodeChangeAuthorization)
 
 	return nil
 }

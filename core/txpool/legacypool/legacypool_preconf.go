@@ -31,7 +31,7 @@ func (pool *LegacyPool) PendingPreconfTxs(filter txpool.PendingFilter) ([]*types
 	defer preconf.MetricsPreconfTxPoolFilterCost(time.Now())
 	// If only blob transactions are requested, this pool is unsuitable as it
 	// contains none, don't even bother.
-	if filter.OnlyBlobTxs {
+	if filter.BlobTxs {
 		return nil, nil
 	}
 	pool.mu.Lock()

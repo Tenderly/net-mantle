@@ -1041,7 +1041,7 @@ func (api *API) TraceCall(ctx context.Context, args ethapi.TransactionArgs, bloc
 		return nil, err
 	}
 	var (
-		msg         = args.ToMessage(blockContext.BaseFee, true, true, core.EthcallMode, args.GasPrice)
+		msg         = args.ToMessage(blockContext.BaseFee, true, core.EthcallMode, args.GasPrice)
 		tx          = args.ToTransaction(types.LegacyTxType)
 		traceConfig *TraceConfig
 	)

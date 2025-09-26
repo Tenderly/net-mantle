@@ -592,7 +592,7 @@ func (miner *Miner) fillTransactions(interrupt *atomic.Int32, env *environment) 
 	if !miner.chainConfig.IsOptimism() && miner.chainConfig.IsOsaka(env.header.Number, env.header.Time) {
 		filter.GasLimitCap = params.MaxTxGas
 	}
-	filter.OnlyPlainTxs, filter.OnlyBlobTxs = true, false
+	filter.BlobTxs = false
 
 	// Split the pending transactions into locals and remotes
 	// Fill the block with all available pending transactions.
@@ -615,7 +615,12 @@ func (miner *Miner) fillTransactions(interrupt *atomic.Int32, env *environment) 
 		return nil
 	}
 
-	filter.OnlyPlainTxs, filter.OnlyBlobTxs = false, true
+	filter.BlobTxs = true
+	if miner.chainConfig.IsOsaka(env.header.Number, env.header.Time) {
+		filter.BlobVersion = types.BlobSidecarVersion1
+	} else {
+		filter.BlobVersion = types.BlobSidecarVersion0
+	}
 	pendingBlobTxs := miner.txpool.Pending(filter)
 
 	// Split the pending transactions into locals and remotes.

@@ -329,11 +329,14 @@ func (o *ChainOverrides) apply(cfg *params.ChainConfig) error {
 		cfg.ProxyOwnerUpgradeTime = mantleUpgradeChainConfig.ProxyOwnerUpgradeTime
 		cfg.MantleEverestTime = mantleUpgradeChainConfig.MantleEverestTime
 		cfg.MantleSkadiTime = mantleUpgradeChainConfig.MantleSkadiTime
+		cfg.MantleLimbTime = mantleUpgradeChainConfig.MantleLimbTime
 
 		// active standard EVM version (shanghai/cancun/prague)  in mantle skadi time
 		cfg.ShanghaiTime = mantleUpgradeChainConfig.MantleSkadiTime
 		cfg.CancunTime = mantleUpgradeChainConfig.MantleSkadiTime
 		cfg.PragueTime = mantleUpgradeChainConfig.MantleSkadiTime
+		// active standard EVM version (osaka)  in mantle limb time
+		cfg.OsakaTime = mantleUpgradeChainConfig.MantleLimbTime
 	}
 
 	return cfg.CheckConfigForkOrder()

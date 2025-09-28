@@ -207,6 +207,9 @@ func TestBlockRlpEncodeDecode(t *testing.T) {
 	config.MantleSkadiTime = &zeroTime
 	require.True(t, config.IsOptimismWithSkadi(zeroTime))
 
+	config.MantleLimbTime = &zeroTime
+	require.True(t, config.IsOptimismWithLimb(zeroTime))
+
 	block := getBlock(&config, 10, 2, 50)
 
 	blockRlp, err := rlp.EncodeToBytes(block)

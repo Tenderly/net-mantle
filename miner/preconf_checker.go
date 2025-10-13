@@ -428,7 +428,7 @@ func applyPreconfTransaction(evm *vm.EVM, gp *core.GasPool, statedb *state.State
 	if result.Failed() && result.Err != vm.ErrExecutionReverted {
 		return nil, result.Return(), result.Err
 	}
-	blockNumber, blockHash := header.Number, header.Hash()
+	blockNumber, blockHash, blockTime := header.Number, header.Hash(), header.Time
 	// Update the state with pending changes.
 	var root []byte
 	if evm.ChainConfig().IsByzantium(blockNumber) {
@@ -440,11 +440,11 @@ func applyPreconfTransaction(evm *vm.EVM, gp *core.GasPool, statedb *state.State
 
 	// Merge the tx-local access event into the "block-local" one, in order to collect
 	// all values, so that the witness can be built.
-	if statedb.GetTrie().IsVerkle() {
+	if statedb.Database().TrieDB().IsVerkle() {
 		statedb.AccessEvents().Merge(evm.AccessEvents)
 	}
 
-	receipt = core.MakeReceipt(msg, evm, result, statedb, blockNumber, blockHash, tx, *usedGas, root, evm.ChainConfig(), nonce)
+	receipt = core.MakeReceipt(evm, result, statedb, blockNumber, blockHash, blockTime, tx, *usedGas, root, evm.ChainConfig(), nonce)
 	return receipt, result.Revert(), nil
 }
 

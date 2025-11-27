@@ -21,10 +21,10 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/core/tracing"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/params"
 )
 
 var (

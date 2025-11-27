@@ -22,12 +22,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/consensus/ethash"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/params"
+	"github.com/tenderly/net-mantle/rlp"
 	"golang.org/x/crypto/sha3"
 )
 

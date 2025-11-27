@@ -20,10 +20,10 @@ import (
 	"bytes"
 	"encoding/gob"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/rawdb"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/log"
 )
 
 // TransitionState is a structure that holds the progress markers of the

@@ -11,7 +11,7 @@ import (
 	"math/big"
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/tenderly/net-mantle/common/math"
 )
 
 /*

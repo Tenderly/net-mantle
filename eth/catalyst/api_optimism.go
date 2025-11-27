@@ -3,8 +3,8 @@ package catalyst
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/beacon/engine"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/beacon/engine"
+	"github.com/tenderly/net-mantle/params"
 )
 
 // checkOptimismPayload performs Optimism-specific checks on the payload data (called during [(*ConsensusAPI).newPayload]).

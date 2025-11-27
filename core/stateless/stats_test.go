@@ -19,7 +19,7 @@ package stateless
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-mantle/common"
 )
 
 func TestWitnessStatsAdd(t *testing.T) {

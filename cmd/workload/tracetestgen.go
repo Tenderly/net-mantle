@@ -26,12 +26,12 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth/tracers"
-	"github.com/ethereum/go-ethereum/eth/tracers/logger"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/eth/tracers"
+	"github.com/tenderly/net-mantle/eth/tracers/logger"
+	"github.com/tenderly/net-mantle/internal/flags"
+	"github.com/tenderly/net-mantle/log"
 	"github.com/urfave/cli/v2"
 )
 

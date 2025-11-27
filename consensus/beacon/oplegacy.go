@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/consensus"
+	"github.com/tenderly/net-mantle/core/state"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/rpc"
 )
 
 type OpLegacy struct{}

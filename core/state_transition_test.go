@@ -4,10 +4,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/core/state"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/params"
 )
 
 func TestCalcRefund(t *testing.T) {

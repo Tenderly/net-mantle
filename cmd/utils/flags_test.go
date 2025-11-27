@@ -24,9 +24,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/txpool/legacypool"
-	"github.com/ethereum/go-ethereum/preconf"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/txpool/legacypool"
+	"github.com/tenderly/net-mantle/preconf"
 	"github.com/urfave/cli/v2"
 )
 

@@ -20,10 +20,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/beacon/merkle"
-	"github.com/ethereum/go-ethereum/beacon/params"
-	"github.com/ethereum/go-ethereum/common"
-	ctypes "github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-mantle/beacon/merkle"
+	"github.com/tenderly/net-mantle/beacon/params"
+	"github.com/tenderly/net-mantle/common"
+	ctypes "github.com/tenderly/net-mantle/core/types"
 )
 
 // HeadInfo represents an unvalidated new head announcement.

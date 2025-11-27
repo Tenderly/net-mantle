@@ -22,13 +22,13 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/internal/ethapi/override"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/state"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/internal/ethapi/override"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/params"
 )
 
 // Options are the contextual parameters to execute the requested call.

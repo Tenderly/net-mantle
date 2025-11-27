@@ -19,9 +19,9 @@ package downloader
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/log"
 )
 
 // BeaconDevSync is a development helper to test synchronization by providing

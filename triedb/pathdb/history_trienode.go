@@ -27,10 +27,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/rawdb"
+	"github.com/tenderly/net-mantle/ethdb"
+	"github.com/tenderly/net-mantle/log"
 )
 
 // Each trie node history entry consists of three parts (stored in three freezer

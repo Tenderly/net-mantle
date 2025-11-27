@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/forkid"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/forkid"
+	"github.com/tenderly/net-mantle/metrics"
+	"github.com/tenderly/net-mantle/p2p"
 )
 
 const (

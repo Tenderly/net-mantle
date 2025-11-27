@@ -19,9 +19,9 @@ package engine
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/crypto/kzg4844"
 )
 
 func TestBlobs(t *testing.T) {

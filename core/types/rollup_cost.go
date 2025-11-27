@@ -19,8 +19,8 @@ package types
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/params"
 )
 
 type RollupCostData struct {

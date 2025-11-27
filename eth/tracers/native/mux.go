@@ -20,11 +20,11 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/tracers"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/tracing"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/eth/tracers"
+	"github.com/tenderly/net-mantle/params"
 )
 
 func init() {

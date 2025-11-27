@@ -21,11 +21,11 @@ import (
 	"os"
 	"runtime/debug"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/stateless"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/stateless"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/core/vm"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 // Payload represents the input data for stateless execution containing

@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/internal/testlog"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/internal/testlog"
+	"github.com/tenderly/net-mantle/log"
 )
 
 type testRecorder struct {

@@ -20,9 +20,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/txpool"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/core/txpool"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/log"
 )
 
 // A PoolJournaler periodically journales a transaction pool to disk.

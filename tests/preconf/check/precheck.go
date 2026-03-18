@@ -5,8 +5,8 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/tests/preconf/config"
+	"github.com/tenderly/net-mantle/ethclient"
+	"github.com/tenderly/net-mantle/tests/preconf/config"
 )
 
 func precheck() {

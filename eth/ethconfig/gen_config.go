@@ -6,13 +6,13 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/history"
-	"github.com/ethereum/go-ethereum/core/txpool/blobpool"
-	"github.com/ethereum/go-ethereum/core/txpool/legacypool"
-	"github.com/ethereum/go-ethereum/eth/gasprice"
-	"github.com/ethereum/go-ethereum/miner"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/history"
+	"github.com/tenderly/net-mantle/core/txpool/blobpool"
+	"github.com/tenderly/net-mantle/core/txpool/legacypool"
+	"github.com/tenderly/net-mantle/eth/gasprice"
+	"github.com/tenderly/net-mantle/miner"
 )
 
 // MarshalTOML marshals as TOML.

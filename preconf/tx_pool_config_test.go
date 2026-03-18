@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-mantle/common"
 )
 
 func Test_IsPreconfTx(t *testing.T) {

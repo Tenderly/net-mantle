@@ -23,11 +23,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/stateless"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common/hexutil"
+	"github.com/tenderly/net-mantle/core/stateless"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/params"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 // ExtWitness is a witness RLP encoding for transferring across clients.

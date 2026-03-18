@@ -22,9 +22,9 @@ import (
 	"math"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/crypto"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 // hasherPool holds LegacyKeccak256 buffer for rlpHash.

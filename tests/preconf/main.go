@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/ethereum/go-ethereum/tests/preconf/check"
-	frontrunning "github.com/ethereum/go-ethereum/tests/preconf/front_running"
-	"github.com/ethereum/go-ethereum/tests/preconf/sort"
-	"github.com/ethereum/go-ethereum/tests/preconf/stress"
+	"github.com/tenderly/net-mantle/tests/preconf/check"
+	frontrunning "github.com/tenderly/net-mantle/tests/preconf/front_running"
+	"github.com/tenderly/net-mantle/tests/preconf/sort"
+	"github.com/tenderly/net-mantle/tests/preconf/stress"
 )
 
 // There are three tests that require manual modification of op-geth configuration to cover:

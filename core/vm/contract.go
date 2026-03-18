@@ -17,8 +17,8 @@
 package vm
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/tracing"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/tracing"
 	"github.com/holiman/uint256"
 )
 

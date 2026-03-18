@@ -24,7 +24,7 @@ import (
 	"math/bits"
 	"reflect"
 
-	"github.com/ethereum/go-ethereum/rlp/internal/rlpstruct"
+	"github.com/tenderly/net-mantle/rlp/internal/rlpstruct"
 	"github.com/holiman/uint256"
 )
 

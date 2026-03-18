@@ -21,8 +21,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/vm"
 	"github.com/holiman/uint256"
 )
 

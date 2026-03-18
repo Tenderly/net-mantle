@@ -7,14 +7,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/miner"
-	"github.com/ethereum/go-ethereum/tests/preconf/config"
+	"github.com/tenderly/net-mantle/accounts/abi/bind"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/hexutil"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/ethclient"
+	"github.com/tenderly/net-mantle/miner"
+	"github.com/tenderly/net-mantle/tests/preconf/config"
 	"golang.org/x/sync/semaphore"
 )
 

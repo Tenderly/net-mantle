@@ -22,9 +22,9 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params/forks"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/params/forks"
 )
 
 // Genesis hashes to enforce below configs on.

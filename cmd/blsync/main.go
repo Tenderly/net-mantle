@@ -22,13 +22,13 @@ import (
 	"os"
 	"slices"
 
-	"github.com/ethereum/go-ethereum/beacon/blsync"
-	"github.com/ethereum/go-ethereum/cmd/utils"
-	"github.com/ethereum/go-ethereum/internal/debug"
-	"github.com/ethereum/go-ethereum/internal/flags"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-mantle/beacon/blsync"
+	"github.com/tenderly/net-mantle/cmd/utils"
+	"github.com/tenderly/net-mantle/internal/debug"
+	"github.com/tenderly/net-mantle/internal/flags"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/node"
+	"github.com/tenderly/net-mantle/rpc"
 	"github.com/urfave/cli/v2"
 )
 

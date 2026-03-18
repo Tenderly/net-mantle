@@ -19,13 +19,13 @@ package eth
 import (
 	"errors"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/txpool"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/core/txpool"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/eth/protocols/eth"
+	"github.com/tenderly/net-mantle/p2p/enode"
 )
 
 // ethHandler implements the eth.Backend interface to handle the various network

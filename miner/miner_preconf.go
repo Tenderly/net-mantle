@@ -4,9 +4,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-mantle/core"
+	"github.com/tenderly/net-mantle/core/types"
+	"github.com/tenderly/net-mantle/log"
 )
 
 func (miner *Miner) preconfLoop() {

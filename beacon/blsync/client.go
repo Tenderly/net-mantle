@@ -17,18 +17,18 @@
 package blsync
 
 import (
-	"github.com/ethereum/go-ethereum/beacon/light"
-	"github.com/ethereum/go-ethereum/beacon/light/api"
-	"github.com/ethereum/go-ethereum/beacon/light/request"
-	"github.com/ethereum/go-ethereum/beacon/light/sync"
-	"github.com/ethereum/go-ethereum/beacon/params"
-	"github.com/ethereum/go-ethereum/beacon/types"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/ethdb/memorydb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-mantle/beacon/light"
+	"github.com/tenderly/net-mantle/beacon/light/api"
+	"github.com/tenderly/net-mantle/beacon/light/request"
+	"github.com/tenderly/net-mantle/beacon/light/sync"
+	"github.com/tenderly/net-mantle/beacon/params"
+	"github.com/tenderly/net-mantle/beacon/types"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/common/mclock"
+	"github.com/tenderly/net-mantle/ethdb/memorydb"
+	"github.com/tenderly/net-mantle/event"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/rpc"
 )
 
 type Client struct {

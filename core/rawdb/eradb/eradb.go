@@ -25,10 +25,10 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common/lru"
-	"github.com/ethereum/go-ethereum/internal/era"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-mantle/common/lru"
+	"github.com/tenderly/net-mantle/internal/era"
+	"github.com/tenderly/net-mantle/log"
+	"github.com/tenderly/net-mantle/rlp"
 )
 
 const openFileLimit = 64

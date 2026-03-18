@@ -7,8 +7,8 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/superchain"
+	"github.com/tenderly/net-mantle/common"
+	"github.com/tenderly/net-mantle/superchain"
 )
 
 // To work with optimism op-node
